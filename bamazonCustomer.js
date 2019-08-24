@@ -53,6 +53,7 @@ function promptCustomerForItem () {
         //console.log(res[0].price);
         if (res[0].stock_quantity<buyItem.pickQuantity){
           console.log('Insufficient quantity!')
+          keepShopping();
         }
         else {
           var totalCost = buyItem.pickQuantity * res[0].price;
